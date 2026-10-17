@@ -1,0 +1,7 @@
+# For shared hosting (Hostinger) when the project is uploaded INTO public_html:
+# send every request to the "public" folder, where Laravel's index.php lives.
+# (Not used on your Mac — Herd serves the public folder automatically.)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
